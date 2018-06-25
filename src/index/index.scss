@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  margin: 0;
+  font-size: 1.3em;
+  font-family: "Roboto";
+}
+
+.App {
+  text-align: center;
+}
+
+.Button {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 40px;
+  width: 150px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.Button:hover {
+  background-color: #0062cc;
+  cursor: pointer;
+}
+
+.factory > div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.factory > div > i {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.factory > div > .fa-trash {
+  color: #912727;
+}
+
+.factory > div > .fa-edit {
+  color: #1c691c;
+}
+
+.factory > div > .fa-trash:hover {
+  color: #a52c2c;
+}
+
+.factory > div > .fa-edit:hover {
+  color: #609660;
+}
+
+#rootList {
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/*Adding css to the immediate div inside modal*/
+#modal > div {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 60vh;
+  background-color: white;
+  justify-content: center;
+}
+
+/*Selects any p element within the modal*/
+#modal p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-self: right;
+}
