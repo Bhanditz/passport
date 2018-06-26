@@ -18,16 +18,18 @@ class Modal extends Component {
                                value = {this.props.name} onChange={this.props.handleChange}
                         />
                         <input
-                            type="text"
+                            type="number"
                             name="totalNodes"
                             placeholder="Number of Nodes"
+                            max="15"
+                            min="0"
                             onChange={this.props.handleChange}
                             value = {this.props.totalNodes}
                         />
-                        <input type="text" name="upper" placeholder="Upper Bound"
+                        <input type="number" name="upper" placeholder="Upper Bound" min="1"
                                value = {this.props.upper} onChange={this.props.handleChange}
                         />
-                        <input type="text" name="lower" placeholder="Lower Bound"
+                        <input type="number" name="lower" placeholder="Lower Bound" min="0"
                                value = {this.props.lower} onChange={this.props.handleChange}
                         />
                         <input

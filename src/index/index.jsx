@@ -45,8 +45,19 @@ class App extends Component {
 
     //Generic handle state function
     handleChange(e) {
+
+        const name = e.target.name;
+        let value = e.target.value;
+
+        if (name === "nodes") {
+            if (value > 15)
+                value = 15;
+            if (value < 0)
+                value = 0;
+        }
+
         this.setState({
-            [e.target.name]: e.target.value
+            [name]: value
         })
     }
 
