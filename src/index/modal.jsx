@@ -9,14 +9,21 @@ class Modal extends Component {
                         e.stopPropagation();
                     }}
                 >
+                    <div className = "modalTitle">
+                        <p>Create Factory</p>
+                        <i className="fas fa-window-close" onClick={this.props.toggleModal} />
+                    </div>
+
                     <form onSubmit={(e)=> {
                         e.preventDefault();
                         this.props.toggleModal();
                         this.props.createFactory();
                     }}>
-                        <input type="text" name="name" placeholder="Name"
+                        <p>Name:</p>
+                        <input type="text" name="name" placeholder="Name" maxLength="50"
                                value = {this.props.name} onChange={this.props.handleChange}
                         />
+                        <p>Total Nodes:</p>
                         <input
                             type="number"
                             name="totalNodes"
@@ -26,16 +33,17 @@ class Modal extends Component {
                             onChange={this.props.handleChange}
                             value = {this.props.totalNodes}
                         />
-                        <input type="number" name="upper" placeholder="Upper Bound" min="1"
-                               value = {this.props.upper} onChange={this.props.handleChange}
-                        />
+                        <p>Lower Bound:</p>
                         <input type="number" name="lower" placeholder="Lower Bound" min="0"
                                value = {this.props.lower} onChange={this.props.handleChange}
                         />
-                        <input
-                            type="submit"
-                            value="Submit"
+                        <p>Upper Bound:</p>
+                        <input type="number" name="upper" placeholder="Upper Bound" min="1"
+                               value = {this.props.upper} onChange={this.props.handleChange}
                         />
+                        <div className="submitButton">
+                            <button type="submit">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

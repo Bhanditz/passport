@@ -53,7 +53,7 @@ class Factory extends Component {
         return (
             <li className="factory">
                 <div>
-                    {this.state.editName ? <input name="name" value={this.state.name} onChange={this.handleChange} type="text"/>
+                    {this.state.editName ? <input name="name" value={this.state.name} onChange={this.handleChange} type="text" maxLength="50"/>
                         : <p>{this.props.factory.name}</p>}
                     {/*FontAwesome icons used for buttons */}
                     {this.state.editName ? <i className="fas fa-check" onClick={()=> {

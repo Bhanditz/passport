@@ -9,7 +9,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            name: "",
+            name: "Passport",
             totalNodes: 5,
             upper: 200,
             lower: 0,

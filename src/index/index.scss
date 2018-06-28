@@ -43,15 +43,23 @@ body {
     color: #912727;
   }
 
-  > .fa-edit {
-    color: #1c691c;
-  }
-
   > .fa-trash:hover {
     color: #a52c2c;
   }
 
+  > .fa-edit {
+    color: #1c691c;
+  }
+
   > .fa-edit:hover {
+    color: #609660;
+  }
+
+  > .fa-check {
+    color: #1c691c;
+  }
+
+  > .fa-check:hover {
     color: #609660;
   }
 
@@ -63,31 +71,90 @@ body {
 }
 
 #modal {
+
+
+
   display: grid;
   justify-content: center;
   align-content: center;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
+
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+
   background-color: rgba(0, 0, 0, 0.4);
   margin: 0;
 
   /*Adding css to the immediate div inside modal*/
   > div {
+    border-radius: 15px;
+    border: black;
+
     display: flex;
     flex-direction: column;
-    height: 20vh;
-    width: 60vh;
+    height: 30vh;
+    min-width: 10vw;
     background-color: white;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 20px 20px 20px 20px;
   }
 
   /*Selects any p element within the modal*/
   p {
+    font-size: .8em;
+    font-family: "Roboto";
     padding: 0;
     margin: 0;
     width: 100%;
-    align-self: right;
   }
 
+  input {
+    background-color: #d2d2d2;
+  }
+
+  button {
+    align-content: right;
+  }
+
+  i {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+
+  .fa-window-close {
+    color: #007bff;
+  }
+
+  .fa-window-close:hover {
+    color: #0062cc;
+  }
+
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+
+  > i {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+
+}
+
+.submitButton {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
